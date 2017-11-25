@@ -1,7 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Deque = require("collections/deque");
 require("collections/shim-array");
-var prng = require("./prng");
+var prng = require("collections/test/spec/prng");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 exports.fuzzDeque = fuzzDeque;
 function fuzzDeque(Deque) {
@@ -90,3 +94,5 @@ function stringifyOp(op) {
     return op[0] + "(" + op[1].join(", ") + ")";
 }
 
+
+return module.exports;});

@@ -1,6 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Set = require("collections/set");
 var Map = require("collections/map");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("Clone-spec", function () {
 
@@ -19,3 +23,5 @@ describe("Clone-spec", function () {
     });
 
 });
+
+return module.exports;});

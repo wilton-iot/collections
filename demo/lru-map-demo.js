@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var LruMap = require("../lru-map");
+var LruMap = require("collections/lru-map");
 
 var map = new LruMap({a: 10, b: 20, c: 30}, 3);
 
@@ -15,3 +16,5 @@ console.log(map.toObject());
 map["delete"]("d");
 console.log(map.toObject());
 
+
+return module.exports;});

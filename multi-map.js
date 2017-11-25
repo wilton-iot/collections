@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Map = require("./map").CollectionsMap;
+var Map = require("collections/map").CollectionsMap;
 
 module.exports = MultiMap;
 function MultiMap(values, bucket, equals, hash) {
@@ -38,3 +39,5 @@ MultiMap.prototype.set = function (key, newValues) {
 MultiMap.prototype.bucket = function (key) {
     return [];
 };
+
+return module.exports;});

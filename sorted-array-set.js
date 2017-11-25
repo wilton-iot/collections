@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = SortedArraySet;
 
-var Shim = require("./shim");
-var SortedArray = require("./sorted-array");
-var GenericSet = require("./generic-set");
-var PropertyChanges = require("./listen/property-changes");
+var Shim = require("collections/shim");
+var SortedArray = require("collections/sorted-array");
+var GenericSet = require("collections/generic-set");
+var PropertyChanges = require("collections/listen/property-changes");
 
 function SortedArraySet(values, equals, compare, getDefault) {
     if (!(this instanceof SortedArraySet)) {
@@ -52,3 +53,5 @@ SortedArraySet.prototype.reduceRight = function (callback, basis /*, thisp*/) {
         return callback.call(thisp, basis, value, index, self);
     }, basis);
 };
+
+return module.exports;});

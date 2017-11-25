@@ -1,9 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = Iterator;
 
-var Object = require("./shim-object");
-var GenericCollection = require("./generic-collection");
+var Object = require("collections/shim-object");
+var GenericCollection = require("collections/generic-collection");
 
 // upgrades an iterable to a Iterator
 function Iterator(iterable) {
@@ -372,3 +373,5 @@ Iterator.repeat = function (value, times) {
         return value;
     });
 };
+
+return module.exports;});

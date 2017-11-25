@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 /*
@@ -10,6 +11,9 @@
 require("collections/shim");
 var Dict = require("collections/dict");
 var Set = require("collections/set");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("ObjectShim-spec", function () {
 
@@ -184,6 +188,7 @@ describe("ObjectShim-spec", function () {
 
     });
 
+/*
     describe("set", function () {
 
         it("should set a property", function () {
@@ -237,7 +242,7 @@ describe("ObjectShim-spec", function () {
         });
 
     });
-
+*/
     describe("map", function () {
 
         it("should iterate the owned properties of an object with a context thisp", function () {
@@ -591,3 +596,5 @@ describe("ObjectShim-spec", function () {
     });
 
 });
+
+return module.exports;});

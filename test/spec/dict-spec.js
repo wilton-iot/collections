@@ -1,7 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Dict = require("collections/dict");
-var describeDict = require("./dict");
-var describeToJson = require("./to-json");
+var describeDict = require("collections/test/spec/dict");
+var describeToJson = require("collections/test/spec/to-json");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("Dict-spec", function () {
     describeDict(Dict);
@@ -25,3 +29,5 @@ describe("Dict-spec", function () {
 
 });
 
+
+return module.exports;});

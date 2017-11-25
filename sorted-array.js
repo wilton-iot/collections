@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = SortedArray;
 
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
-var PropertyChanges = require("./listen/property-changes");
-var RangeChanges = require("./listen/range-changes");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
 
 function SortedArray(values, equals, compare, getDefault) {
     if (!(this instanceof SortedArray)) {
@@ -333,3 +334,5 @@ SortedArray.prototype.toJSON = function () {
 };
 
 SortedArray.prototype.Iterator = Array.prototype.Iterator;
+
+return module.exports;});

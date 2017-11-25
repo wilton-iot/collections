@@ -1,9 +1,13 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var SortedArray = require("collections/sorted-array");
-var describeCollection = require("./collection");
-var describeDeque = require("./deque");
-var describeOrder = require("./order");
-var describeToJson = require("./to-json");
+var describeCollection = require("collections/test/spec/collection");
+var describeDeque = require("collections/test/spec/deque");
+var describeOrder = require("collections/test/spec/order");
+var describeToJson = require("collections/test/spec/to-json");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("SortedArray-spec", function () {
 
@@ -40,3 +44,5 @@ describe("SortedArray-spec", function () {
     // TODO test stability
 
 });
+
+return module.exports;});

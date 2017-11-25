@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 require("collections/listen/array-changes");
-var describeRangeChanges = require("./range-changes");
+var describeRangeChanges = require("collections/range-changes");
 
 describe("Array change dispatch", function () {
 
@@ -557,3 +558,5 @@ describe("Array change dispatch", function () {
     });
 
 });
+
+return module.exports;});

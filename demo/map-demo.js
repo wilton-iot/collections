@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var Map = require("../map");
+var Map = require("collections/map");
 
 var map = new Map();
 map.set('a', 10);
@@ -40,3 +41,5 @@ var map = new Map();
 map.set(10, 'b');
 map.set(0, 'a');
 console.log(map.toArray());
+
+return module.exports;});

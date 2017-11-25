@@ -1,10 +1,14 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 require("collections/shim");
 require("collections/listen/array-changes");
 var GenericCollection = require("collections/generic-collection");
-var describeDeque = require("./deque");
-var describeCollection = require("./collection");
-var describeOrder = require("./order");
-var describeMapChanges = require("./listen/map-changes");
+var describeDeque = require("collections/deque");
+var describeCollection = require("collections/test/spec/collection");
+var describeOrder = require("collections/test/spec/order");
+var describeMapChanges = require("collections/test/spec/listen/map-changes");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("Array-spec", function () {
     describeDeque(Array.from);
@@ -221,9 +225,7 @@ describe("Array-spec", function () {
 
     describe("swap", function () {
         var array, otherArray;
-        beforeEach(function () {
-            array = [1, 2, 3];
-        });
+        array = [1, 2, 3];
         it("should be able to replace content with content of another arraylike", function () {
             otherArray = { __proto__ : Array.prototype };
             otherArray[0] = 4;
@@ -232,16 +234,19 @@ describe("Array-spec", function () {
             array.swap(0, array.length, otherArray);
             expect(array).toEqual([4, 5]);
         });
+        array = [1, 2, 3];
         it("should ignore non array like plus value", function () {
             array.swap(0, array.length, 4);
             expect(array).toEqual([]);
 
         });
+        array = [1, 2, 3];
         it("should ignore extra arguments", function () {
             array.swap(0, array.length, 4, 5, 6);
             expect(array).toEqual([]);
 
         });
+        array = [1, 2, 3];
         it("should work with large arrays", function () {
             otherArray = new Array(200000);
             expect(function () {
@@ -249,6 +254,7 @@ describe("Array-spec", function () {
             }).not.toThrow();
             expect(array.length).toEqual(200000);
         });
+        array = [1, 2, 3];
         it("swaps at an outer index", function () {
             array.swap(4, 0, [5]);
             expect(array).toEqual([1, 2, 3, , 5]);
@@ -294,3 +300,5 @@ describe("Array-spec", function () {
     });
 
 });
+
+return module.exports;});

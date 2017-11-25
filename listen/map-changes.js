@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var WeakMap = require("../weak-map"),
-    Map = require("../_map"),
-    ChangeDescriptor = require("./change-descriptor"),
+var WeakMap = require("collections/weak-map"),
+    Map = require("collections/_map"),
+    ChangeDescriptor = require("collections/listen/change-descriptor"),
     ObjectChangeDescriptor = ChangeDescriptor.ObjectChangeDescriptor,
     ChangeListenersRecord = ChangeDescriptor.ChangeListenersRecord,
     ListenerGhost = ChangeDescriptor.ListenerGhost;
@@ -259,3 +260,5 @@ MapChanges.prototype.removeBeforeMapChangeListener = function (listener, token) 
 MapChanges.prototype.dispatchBeforeMapChange = function (key, value) {
     return this.dispatchMapChange(key, value, true);
 };
+
+return module.exports;});

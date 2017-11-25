@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var SortedMap = require("../sorted-map");
+var SortedMap = require("collections/sorted-map");
 
 var map = new SortedMap();
 
@@ -30,3 +31,5 @@ console.log('got', map.get(0));
 map.delete(0);
 console.log('got', map.get(0));
 
+
+return module.exports;});

@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /*
  Based in part on observable arrays from Motorola Mobility’s Montage
  Copyright (c) 2012, Motorola Mobility LLC. All Rights Reserved.
@@ -12,7 +13,7 @@
  necessary for any collection with observable content.
  */
 
-require("../shim");
+require("collections/shim");
 var array_splice = Array.prototype.splice,
     array_spliceOne = Array.prototype.spliceOne,
     array_slice = Array.prototype.slice,
@@ -420,10 +421,12 @@ var observableArrayProperties = {
 var ChangeDispatchArray = Object.create(Array.prototype, observableArrayProperties);
 exports.observableArrayProperties = observableArrayProperties;
 
-var PropertyChanges = require("./property-changes");
-var RangeChanges = require("./range-changes");
-var MapChanges = require("./map-changes");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
+var MapChanges = require("collections/listen/map-changes");
 
 Object.defineEach(Array.prototype, PropertyChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
 Object.defineEach(Array.prototype, RangeChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
 Object.defineEach(Array.prototype, MapChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
+
+return module.exports;});

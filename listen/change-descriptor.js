@@ -1,10 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /*
     Copyright (c) 2016, Montage Studio Inc. All Rights Reserved.
     3-Clause BSD License
     https://github.com/montagejs/montage/blob/master/LICENSE.md
 */
 
-var Map = require("../_map");
+var Map = require("collections/_map");
 
 var ObjectChangeDescriptor = module.exports.ObjectChangeDescriptor = function ObjectChangeDescriptor(name) {
     this.name = name;
@@ -139,3 +140,5 @@ function WillChangeListenersRecord(name) {
 WillChangeListenersRecord.prototype = new ChangeListenersRecord();
 WillChangeListenersRecord.prototype.constructor = WillChangeListenersRecord;
 WillChangeListenersRecord.prototype.genericHandlerMethodName = "handlePropertyWillChange";
+
+return module.exports;});

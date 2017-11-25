@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var Iterator = require("../iterator");
-var List = require("../list");
+var Iterator = require("collections/iterator");
+var List = require("collections/list");
 
 Iterator.range(10).forEach(function (n) {
     console.log(n);
@@ -130,3 +131,5 @@ console.log(Iterator([1, 2, 3, 4]).max());
 
 console.log(Iterator("abc").sum(""));
 
+
+return module.exports;});

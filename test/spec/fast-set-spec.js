@@ -1,12 +1,16 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 var Set = require("collections/fast-set");
 var Iterator = require("collections/iterator");
 var TreeLog = require("collections/tree-log");
 
-var describeCollection = require("./collection");
-var describeSet = require("./set");
-var describeToJson = require("./to-json");
+var describeCollection = require("collections/test/spec/collection");
+var describeSet = require("collections/test/spec/set");
+var describeToJson = require("collections/test/spec/to-json");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("Set-spec", function () {
     // new Set()
@@ -170,3 +174,5 @@ describe("Set-spec", function () {
         });
     });
 });
+
+return module.exports;});

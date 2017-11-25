@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var SortedSet = require("../sorted-set");
+var SortedSet = require("collections/sorted-set");
 
 var tree = new SortedSet();
 tree.add(1);
@@ -30,3 +31,5 @@ tree.log(SortedSet.unicodeSharp);
 console.log("Unicode round");
 tree.log();
 
+
+return module.exports;});

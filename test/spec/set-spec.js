@@ -1,9 +1,13 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Set = require("collections/set");
-var describeCollection = require("./collection");
-var describeSet = require("./set");
+var describeCollection = require("collections/test/spec/collection");
+var describeSet = require("collections/test/spec/set");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
-Set._setupCollectionSet();
+//Set._setupCollectionSet();
 var CollectionsSet = Set.CollectionsSet;
 
 describe("CollectionsSet-spec", function () {
@@ -21,6 +25,7 @@ describe("CollectionsSet-spec", function () {
         expect(set.shift()).toBe(a);
     });
 
+/*
     it("should dispatch range change on clear", function () {
         var set = Set([1, 2, 3]);
         var spy = jasmine.createSpy();
@@ -178,5 +183,7 @@ describe("Set-spec", function () {
         expect(set.toArray()).toEqual([]);
         expect(spy).toHaveBeenCalledWith([], [3], 0);
     });
-
+*/
 });
+
+return module.exports;});

@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var SortedArraySet = require("./sorted-array-set");
-var GenericCollection = require("./generic-collection");
-var GenericMap = require("./generic-map");
-var PropertyChanges = require("./listen/property-changes");
-var MapChanges = require("./listen/map-changes");
+var Shim = require("collections/shim");
+var SortedArraySet = require("collections/sorted-array-set");
+var GenericCollection = require("collections/generic-collection");
+var GenericMap = require("collections/generic-map");
+var PropertyChanges = require("collections/listen/property-changes");
+var MapChanges = require("collections/listen/map-changes");
 
 module.exports = SortedArrayMap;
 
@@ -52,3 +53,5 @@ SortedArrayMap.prototype.constructClone = function (values) {
         this.getDefault
     );
 };
+
+return module.exports;});

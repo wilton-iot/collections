@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 // TODO rename set-fuzz
 
-var makeRandom = require("./prng");
+var makeRandom = require("collections/test/spec/prng");
 exports.makeRandom = makeRandom;
 
 exports.make = makeFuzz;
@@ -77,3 +78,5 @@ function executeFuzz(set, operations, log) {
     });
 }
 
+
+return module.exports;});

@@ -1,9 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-require("./shim-object");
-var GenericCollection = require("./generic-collection");
-var GenericOrder = require("./generic-order");
-var RangeChanges = require("./listen/range-changes");
+require("collections/shim-object");
+var GenericCollection = require("collections/generic-collection");
+var GenericOrder = require("collections/generic-order");
+var RangeChanges = require("collections/listen/range-changes");
 
 // by Petka Antonov
 // https://github.com/petkaantonov/deque/blob/master/js/deque.js
@@ -441,3 +442,5 @@ function pow2AtLeast(n) {
     n = n | (n >> 16);
     return n + 1;
 }
+
+return module.exports;});

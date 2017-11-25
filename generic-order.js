@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var Object = require("./shim-object");
+var Object = require("collections/shim-object");
 
 module.exports = GenericOrder;
 function GenericOrder() {
@@ -56,3 +57,5 @@ GenericOrder.prototype.compare = function (that, compare) {
 GenericOrder.prototype.toJSON = function () {
     return this.toArray();
 };
+
+return module.exports;});

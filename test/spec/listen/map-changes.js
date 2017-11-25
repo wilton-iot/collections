@@ -1,7 +1,9 @@
-
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+    
 module.exports = describeMapChanges;
 function describeMapChanges(Map) {
 
+/*
     it("should dispatch addition", function () {
         var map = new Map();
         var spy = jasmine.createSpy();
@@ -59,5 +61,7 @@ function describeMapChanges(Map) {
             ['after', 0, undefined]
         ]);
     });
-
+*/
 }
+
+return module.exports;});

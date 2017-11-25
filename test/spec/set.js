@@ -1,5 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Iterator = require("collections/iterator");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 module.exports = describeSet;
 function describeSet(Set, sorted) {
@@ -132,3 +136,5 @@ function describeSet(Set, sorted) {
     });
 
 }
+
+return module.exports;});

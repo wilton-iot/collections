@@ -1,28 +1,25 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 // used exclusively to generate collections.min.js for browsers
 
-var Shim = require("./shim");
+var Shim = require("collections/shim");
 
-/*jshint evil:true */
-// reassigning causes eval to not use lexical scope.
-var globalEval = eval,
-    global = globalEval('this');
-/*jshint evil:false */
+exports.List = require("collections/list");
+exports.Set = require("collections/set");
+exports.Map = require("collections/map");
+exports.MultiMap = require("collections/multi-map");
+exports.WeakMap = require("collections/weak-map");
+exports.SortedSet = require("collections/sorted-set");
+exports.SortedMap = require("collections/sorted-map");
+exports.LruSet = require("collections/lru-set");
+exports.LruMap = require("collections/lru-map");
+exports.SortedArray = require("collections/sorted-array");
+exports.SortedArraySet = require("collections/sorted-array-set");
+exports.SortedArrayMap = require("collections/sorted-array-map");
+exports.FastSet = require("collections/fast-set");
+exports.FastMap = require("collections/fast-map");
+exports.Dict = require("collections/dict");
+exports.Iterator = require("collections/iterator");
 
-global.List = require("./list");
-global.Set = require("./set");
-global.Map = require("./map");
-global.MultiMap = require("./multi-map");
-global.WeakMap = require("./weak-map");
-global.SortedSet = require("./sorted-set");
-global.SortedMap = require("./sorted-map");
-global.LruSet = require("./lru-set");
-global.LruMap = require("./lru-map");
-global.SortedArray = require("./sorted-array");
-global.SortedArraySet = require("./sorted-array-set");
-global.SortedArrayMap = require("./sorted-array-map");
-global.FastSet = require("./fast-set");
-global.FastMap = require("./fast-map");
-global.Dict = require("./dict");
-global.Iterator = require("./iterator");
 
+return module.exports;});

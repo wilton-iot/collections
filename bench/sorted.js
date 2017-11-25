@@ -1,7 +1,8 @@
-var SortedSet = require("../sorted-set");
-var SortedArraySet = require("../sorted-array-set");
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var SortedSet = require("collections/sorted-set");
+var SortedArraySet = require("collections/sorted-array-set");
 
-var Fuzz = require("../spec/fuzz");
+var Fuzz = require("collections/spec/fuzz");
 var iterations = 1000;
 var size = 10000;
 
@@ -50,3 +51,5 @@ var size = 10000;
     console.log('SortedArraySet:', sortedArraySetSpeed);
 
 });
+
+return module.exports;});

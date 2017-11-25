@@ -1,5 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 require("collections/shim-regexp");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("RegExp-spec", function () {
     describe("escape", function () {
@@ -32,3 +36,5 @@ describe("RegExp-spec", function () {
     });
 });
 
+
+return module.exports;});

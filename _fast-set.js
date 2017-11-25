@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var Dict = require("./_dict");
-var List = require("./_list");
-var GenericCollection = require("./generic-collection");
-var GenericSet = require("./generic-set");
-var TreeLog = require("./tree-log");
+var Shim = require("collections/shim");
+var Dict = require("collections/_dict");
+var List = require("collections/_list");
+var GenericCollection = require("collections/generic-collection");
+var GenericSet = require("collections/generic-set");
+var TreeLog = require("collections/tree-log");
 
 var object_has = Object.prototype.hasOwnProperty;
 
@@ -231,3 +232,5 @@ FastSet.prototype.logNode = function (node, write) {
         write(" " + value);
     }
 };
+
+return module.exports;});

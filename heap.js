@@ -1,13 +1,14 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 // Adapted from Eloquent JavaScript by Marijn Haverbeke
 // http://eloquentjavascript.net/appendix2.html
 
-var ArrayChanges = require("./listen/array-changes");
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
-var MapChanges = require("./listen/map-changes");
-var RangeChanges = require("./listen/range-changes");
-var PropertyChanges = require("./listen/property-changes");
+var ArrayChanges = require("collections/listen/array-changes");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
+var MapChanges = require("collections/listen/map-changes");
+var RangeChanges = require("collections/listen/range-changes");
+var PropertyChanges = require("collections/listen/property-changes");
 
 // Max Heap by default.  Comparison can be reversed to produce a Min Heap.
 
@@ -243,3 +244,5 @@ Heap.prototype.handleContentMapChange = function (value, key) {
 Heap.prototype.handleContentMapWillChange = function (value, key) {
     this.dispatchBeforeMapChange(key, value);
 };
+
+return module.exports;});

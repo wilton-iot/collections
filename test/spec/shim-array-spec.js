@@ -1,5 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 require("collections/shim-array");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("ArrayShim-spec", function () {
 
@@ -49,3 +53,5 @@ describe("ArrayShim-spec", function () {
     });
 
 });
+
+return module.exports;});

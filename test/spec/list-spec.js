@@ -1,9 +1,13 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var List = require("collections/list");
-var describeDeque = require("./deque");
-var describeCollection = require("./collection");
-var describeRangeChanges = require("./listen/range-changes");
-var describeToJson = require("./to-json");
+var describeDeque = require("collections/test/spec/deque");
+var describeCollection = require("collections/test/spec/collection");
+var describeRangeChanges = require("collections/test/spec/listen/range-changes");
+var describeToJson = require("collections/test/spec/to-json");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("List-spec", function () {
     // new List()
@@ -212,3 +216,5 @@ describe("List-spec", function () {
     describeToJson(List, [1, 2, 3, 4]);
 
 });
+
+return module.exports;});

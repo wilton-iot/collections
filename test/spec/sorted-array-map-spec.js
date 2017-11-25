@@ -1,9 +1,13 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var SortedArrayMap = require("collections/sorted-array-map");
-var describeDict = require("./dict");
-var describeMap = require("./map");
-var describeMapChanges = require("./listen/map-changes");
-var describeToJson = require("./to-json");
+var describeDict = require("collections/test/spec/dict");
+var describeMap = require("collections/test/spec/map");
+var describeMapChanges = require("collections/test/spec/listen/map-changes");
+var describeToJson = require("collections/test/spec/to-json");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("SortedArrayMap-spec", function () {
     describeDict(SortedArrayMap);
@@ -12,3 +16,5 @@ describe("SortedArrayMap-spec", function () {
     describeToJson(SortedArrayMap, [[1, 10], [2, 20], [3, 30]]);
 });
 
+
+return module.exports;});

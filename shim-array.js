@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 /*
@@ -7,10 +8,10 @@
     https://github.com/motorola-mobility/montage/blob/master/LICENSE.md
 */
 
-var Function = require("./shim-function");
-var GenericCollection = require("./generic-collection");
-var GenericOrder = require("./generic-order");
-var WeakMap = require("./weak-map");
+var Function = require("collections/shim-function");
+var GenericCollection = require("collections/generic-collection");
+var GenericOrder = require("collections/generic-order");
+var WeakMap = require("collections/weak-map");
 
 module.exports = Array;
 
@@ -375,3 +376,5 @@ ArrayIterator.prototype.next = function () {
     }
     return this._iterationObject;
 };
+
+return module.exports;});

@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
 var Map, GlobalMap, CollectionsMap;
 
 if((global.Map !== void 0) && (typeof global.Set.prototype.values === "function")) {
@@ -246,8 +247,8 @@ if((global.Map !== void 0) && (typeof global.Set.prototype.values === "function"
     var ChangeDispatchMap = Object.create(Map.prototype, observableMapProperties);
 }
 
-    var Set = require("./_set").CollectionsSet;
-    var GenericMap = require("./generic-map");
+    var Set = require("collections/_set").CollectionsSet;
+    var GenericMap = require("collections/generic-map");
 
     CollectionsMap = Map = function Map(values, equals, hash, getDefault) {
         if (!(this instanceof Map)) {
@@ -302,9 +303,12 @@ if((global.Map !== void 0) && (typeof global.Set.prototype.values === "function"
     };
 
     if(!GlobalMap) {
+        CollectionsMap.CollectionsMap = CollectionsMap;
         module.exports = CollectionsMap;
     }
     else {
         module.exports = GlobalMap;
         GlobalMap.CollectionsMap = CollectionsMap;
     }
+
+return module.exports;});

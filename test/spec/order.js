@@ -1,5 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var GenericCollection = require("collections/generic-collection");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 module.exports = describeOrder;
 function describeOrder(Collection) {
@@ -356,3 +360,5 @@ function describeOrder(Collection) {
 
 }
 
+
+return module.exports;});

@@ -1,6 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 require("collections/shim-object");
 require("collections/shim-function");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("FunctionShim-spec", function () {
 
@@ -47,3 +51,5 @@ describe("FunctionShim-spec", function () {
 
 });
 
+
+return module.exports;});

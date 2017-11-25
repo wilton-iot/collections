@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var LfuSet = require("./lfu-set");
-var GenericCollection = require("./generic-collection");
-var GenericMap = require("./generic-map");
-var PropertyChanges = require("./listen/property-changes");
-var MapChanges = require("./listen/map-changes");
+var Shim = require("collections/shim");
+var LfuSet = require("collections/lfu-set");
+var GenericCollection = require("collections/generic-collection");
+var GenericMap = require("collections/generic-map");
+var PropertyChanges = require("collections/listen/property-changes");
+var MapChanges = require("collections/listen/map-changes");
 
 module.exports = LfuMap;
 
@@ -81,3 +82,5 @@ LfuMap.prototype.addMapChangeListener = function () {
     }
     MapChanges.prototype.addMapChangeListener.apply(this, arguments);
 };
+
+return module.exports;});

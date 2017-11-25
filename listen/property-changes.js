@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /*
     Based in part on observable arrays from Motorola Mobility’s Montage
     Copyright (c) 2012, Motorola Mobility LLC. All Rights Reserved.
@@ -62,10 +63,10 @@ function PropertyChanges() {
     throw new Error("This is an abstract interface. Mix it. Don't construct it");
 }
 
-require("../shim");
-var Map = require("../_map");
-var WeakMap = require("../weak-map");
-var ChangeDescriptor = require("./change-descriptor"),
+require("collections/shim");
+var Map = require("collections/_map");
+var WeakMap = require("collections/weak-map");
+var ChangeDescriptor = require("collections/listen/change-descriptor"),
     ObjectChangeDescriptor = ChangeDescriptor.ObjectChangeDescriptor,
     ListenerGhost = ChangeDescriptor.ListenerGhost;
 
@@ -479,3 +480,5 @@ PropertyChanges.makePropertyObservable = function (object, key) {
         return PropertyChanges.prototype.makePropertyObservable.call(object, key);
     }
 };
+
+return module.exports;});

@@ -1,7 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Tests that are equally applicable to Map, unbounded LruMap, FastMap.
 // These do not apply to SortedMap since keys are not comparable.
 
-var describeMapChanges = require("./listen/map-changes");
+var describeMapChanges = require("collections/test/spec/listen/map-changes");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 module.exports = describeMap;
 function describeMap(Map, values) {
@@ -91,3 +95,5 @@ function describeMap(Map, values) {
     });
 
 }
+
+return module.exports;});

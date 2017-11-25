@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Map = require("./_map");
-var PropertyChanges = require("./listen/property-changes");
-var MapChanges = require("./listen/map-changes");
+var Map = require("collections/_map");
+var PropertyChanges = require("collections/listen/property-changes");
+var MapChanges = require("collections/listen/map-changes");
 
 module.exports = Map;
 
@@ -14,3 +15,5 @@ else {
     Object.defineEach(Map.prototype, PropertyChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
     Object.defineEach(Map.prototype, MapChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
 }
+
+return module.exports;});

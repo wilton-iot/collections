@@ -1,9 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Set = require("./_set");
-var PropertyChanges = require("./listen/property-changes");
-var RangeChanges = require("./listen/range-changes");
-var MapChanges = require("./listen/map-changes");
+var Set = require("collections/_set");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
+var MapChanges = require("collections/listen/map-changes");
 var GlobalSet;
 
 
@@ -145,14 +146,15 @@ function setupCollectionSet() {
 
     // hack so require("set").Set will work in MontageJS
     CollectionsSet.Set = CollectionsSet;
+    CollectionsSet.CollectionsSet = CollectionsSet;
     CollectionsSet.from = _CollectionsSet.from;
     Set.CollectionsSet = CollectionsSet;
 
     CollectionsSet.prototype = new _CollectionsSet();
     CollectionsSet.prototype.constructor = CollectionsSet;
 
-    var List = require("./list");
-    var FastSet = require("./fast-set");
+    var List = require("collections/list");
+    var FastSet = require("collections/fast-set");
     CollectionsSet.prototype.Order = List;
     CollectionsSet.prototype.Store = FastSet;
 
@@ -223,3 +225,5 @@ function setupCollectionSet() {
 
 
 
+
+return module.exports;});

@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-require("../listen/array-changes");
+require("collections/listen/array-changes");
 
 var array = [];
 
@@ -18,3 +19,5 @@ array.addMapChangeListener(function (value, key) {
 array.push(40);
 array.splice(0, 0, 10, 20, 30);
 
+
+return module.exports;});

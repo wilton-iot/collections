@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
-var GenericSet = require("./generic-set");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
+var GenericSet = require("collections/generic-set");
 var Set, GlobalSet, CollectionsSet;
 
 
@@ -101,9 +102,9 @@ if((global.Set !== void 0) && (typeof global.Set.prototype.values === "function"
 
 
 
-    var List = require("./_list");
-    var FastSet = require("./_fast-set");
-    var Iterator = require("./iterator");
+    var List = require("collections/_list");
+    var FastSet = require("collections/_fast-set");
+    var Iterator = require("collections/iterator");
 
     CollectionsSet = function CollectionsSet(values, equals, hash, getDefault) {
         return CollectionsSet._init(CollectionsSet, this, values, equals, hash, getDefault);
@@ -278,3 +279,5 @@ else {
     module.exports = GlobalSet;
     GlobalSet.CollectionsSet = CollectionsSet;
 }
+
+return module.exports;});

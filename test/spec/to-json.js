@@ -1,3 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 module.exports = describeToJson;
 function describeToJson(Collection, values) {
     describe("toJSON", function () {
@@ -17,3 +21,5 @@ function describeToJson(Collection, values) {
         });
     });
 }
+
+return module.exports;});

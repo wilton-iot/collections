@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global global:true,  __dirname, jasmineRequire */
 
 /*jshint evil:true */
@@ -110,3 +111,5 @@ var specFilter = new jasmine.HtmlSpecFilter({
 jasmineEnv.specFilter = function(spec) {
     return specFilter.matches(spec.getFullName());
 };
+
+return module.exports;});

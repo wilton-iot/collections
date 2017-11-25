@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 module.exports = GenericSet;
 function GenericSet() {
@@ -87,3 +88,5 @@ var _entriesArrayFunction = function(value,key) {return [key,value];};
 GenericSet.prototype.entriesArray = function() {
     return this.map(_entriesArrayFunction);
 }
+
+return module.exports;});

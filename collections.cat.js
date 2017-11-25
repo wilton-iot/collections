@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 (function (global) {
 var module$generic_collection={};module$generic_collection.module$exports=GenericCollection$$module$generic_collection;function GenericCollection$$module$generic_collection(){throw Error("Can't construct. GenericCollection is a mixin.");}
 GenericCollection$$module$generic_collection.prototype.addEach=function(a){if(a&&Object(a)===a)if("function"===typeof a.forEach)a.forEach(this.add,this);else if("number"===typeof a.length)for(var b=0;b<a.length;b++)this.add(a[b],b);else Object.keys(a).forEach(function(b){this.add(a[b],b)},this)};GenericCollection$$module$generic_collection.prototype.deleteEach=function(a){a.forEach(function(a){this["delete"](a)},this)};
@@ -186,3 +187,5 @@ Object.addEach(SortedMap$$module$sorted_map.prototype,GenericMap$$module$sorted_
 SortedMap$$module$sorted_map.prototype.report=function(a,b,c,d){d=d||this.stringify;this.store.report(a,b,c,d)};SortedMap$$module$sorted_map.prototype.stringify=function(a,b,c,d){a.call(b,d+" "+c.value.key+": "+c.value.value)};module$sorted_map.module$exports&&(module$sorted_map=module$sorted_map.module$exports);var module$collections={},Shim$$module$collections=module$shim;global.List=module$list;global.Set=module$set;global.Map=module$map;global.MultiMap=module$multi_map;global.WeakMap=module$weak_map;global.SortedSet=module$sorted_set;global.SortedMap=module$sorted_map;global.LruSet=module$lru_set;global.LruMap=module$lru_map;global.SortedArray=module$sorted_array;global.SortedArraySet=module$sorted_array_set;global.SortedArrayMap=module$sorted_array_map;global.FastSet=module$fast_set;global.FastMap=module$fast_map;
 global.Dict=module$dict;global.Iterator=module$iterator;
 })(this);
+
+return module.exports;});

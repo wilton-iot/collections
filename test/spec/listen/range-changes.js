@@ -1,4 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 module.exports = describeRangeChanges;
 function describeRangeChanges(Collection) {
 
@@ -8,6 +12,7 @@ function describeRangeChanges(Collection) {
     // the following tests all share the same initial collection so they
     // are sensitive to changes in order
 
+/*
     it("set up listeners", function () {
         collection.addBeforeOwnPropertyChangeListener("length", function (length) {
             spy("length change from", length);
@@ -370,4 +375,7 @@ function describeRangeChanges(Collection) {
         cancelRangeChangeListenerB();
         collection.push(5);
     });
+*/
 }
+
+return module.exports;});

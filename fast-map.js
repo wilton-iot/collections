@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var Set = require("./fast-set");
-var GenericCollection = require("./generic-collection");
-var GenericMap = require("./generic-map");
-var PropertyChanges = require("./listen/property-changes");
-var MapChanges = require("./listen/map-changes");
+var Shim = require("collections/shim");
+var Set = require("collections/fast-set");
+var GenericCollection = require("collections/generic-collection");
+var GenericMap = require("collections/generic-map");
+var PropertyChanges = require("collections/listen/property-changes");
+var MapChanges = require("collections/listen/map-changes");
 
 module.exports = FastMap;
 
@@ -57,3 +58,5 @@ FastMap.prototype.log = function (charmap, stringify) {
 FastMap.prototype.stringify = function (item, leader) {
     return leader + JSON.stringify(item.key) + ": " + JSON.stringify(item.value);
 }
+
+return module.exports;});

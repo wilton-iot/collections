@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 /**
     accepts a string; returns the string with regex metacharacters escaped.
@@ -12,3 +13,5 @@ if (!RegExp.escape) {
     };
 }
 
+
+return module.exports;});

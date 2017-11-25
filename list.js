@@ -1,9 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 
-var _List = require("./_list");
-var PropertyChanges = require("./listen/property-changes");
-var RangeChanges = require("./listen/range-changes");
+var _List = require("collections/_list");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
 
 module.exports = List;
 
@@ -268,3 +269,5 @@ List.prototype.reverse = function () {
     }
     return this;
 };
+
+return module.exports;});

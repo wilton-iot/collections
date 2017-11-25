@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = TreeLog;
@@ -38,3 +39,5 @@ TreeLog.unicodeSharp = {
     strafe: "\u2503"
 };
 
+
+return module.exports;});

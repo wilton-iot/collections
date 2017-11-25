@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var SortedSet = require("../sorted-set");
+var SortedSet = require("collections/sorted-set");
 
 var set = new SortedSet();
 set.add(1);
@@ -47,7 +48,7 @@ console.log(set.findGreatestLessThan(7).value);
 console.log(set.findLeastGreaterThan(6).value);
 
 console.log('\nrange iterator');
-var Iterator = require("../iterator");
+var Iterator = require("collections/iterator");
 var iterator = new Iterator(set.iterate(2, 10));
 iterator.forEach(function (value) {
     console.log(value);
@@ -57,3 +58,5 @@ console.log('\nset length')
 var set = new SortedSet([1, 3, 3, 5, 7, 10]);
 console.log(set.length);
 
+
+return module.exports;});

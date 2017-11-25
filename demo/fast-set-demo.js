@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
-var Set = require("../fast-set");
-var Iterator = require("../iterator");
+var Set = require("collections/fast-set");
+var Iterator = require("collections/iterator");
 
 console.log("\nignore non-unique values");
 var set = new Set([1, 1, 1, 2, 2, 2, 1, 2]);
@@ -55,3 +56,5 @@ console.log(new Set([3, 2, 1]).concat([4, 5, 6]).toArray())
 
 //console.log(new Set([1, 2, 3]).equals([1, 2, 3]));
 
+
+return module.exports;});

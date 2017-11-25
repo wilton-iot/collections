@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var WeakMap = require("./weak-map");
+var WeakMap = require("collections/weak-map");
 
 module.exports = Object;
 
@@ -597,3 +598,5 @@ Object.clear = function (object) {
     }
     return object;
 };
+
+return module.exports;});

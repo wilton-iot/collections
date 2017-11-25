@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 module.exports = permute;
 function permute(values) {
@@ -16,3 +17,5 @@ function permute(values) {
     return permutations;
 }
 
+
+return module.exports;});

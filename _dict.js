@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
-var GenericMap = require("./generic-map");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
+var GenericMap = require("collections/generic-map");
 
 // Burgled from https://github.com/domenic/dict
 
@@ -204,3 +205,5 @@ Dict.prototype.one = function () {
 Dict.prototype.toJSON = function () {
     return this.toObject();
 };
+
+return module.exports;});

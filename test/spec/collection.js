@@ -1,7 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Array, List, Set, FastSet, unbounded LruSet.
 // SortedSet does not qualify since these objects are incomparable.
 // Array#get() behaves like a Map, not a Set, so it is excluded from those
 // tests.
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 module.exports = describeCollection;
 function describeCollection(Collection, values, setLike) {
@@ -122,3 +126,5 @@ function describeCollection(Collection, values, setLike) {
     });
 
 }
+
+return module.exports;});

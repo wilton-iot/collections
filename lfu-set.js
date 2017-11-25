@@ -1,13 +1,14 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 // Based on http://dhruvbird.com/lfu.pdf
 
-var Shim = require("./shim");
-var Set = require("./set").CollectionsSet;
-var GenericCollection = require("./generic-collection");
-var GenericSet = require("./generic-set");
-var PropertyChanges = require("./listen/property-changes");
-var RangeChanges = require("./listen/range-changes");
+var Shim = require("collections/shim");
+var Set = require("collections/set").CollectionsSet;
+var GenericCollection = require("collections/generic-collection");
+var GenericSet = require("collections/generic-set");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
 
 module.exports = LfuSet;
 
@@ -245,3 +246,5 @@ function FrequencyNode(frequency, prev, next) {
         next.prev = this;
     }
 }
+
+return module.exports;});

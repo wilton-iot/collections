@@ -1,5 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Iterator = require("collections/iterator");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("Iterator-spec", function () {
 
@@ -647,3 +651,5 @@ function shouldWorkWithConstructor(Iterator) {
     });
 
 }
+
+return module.exports;});

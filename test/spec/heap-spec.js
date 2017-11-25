@@ -1,7 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var Heap = require("collections/heap");
-var permute = require("./permute");
-var describeToJson = require("./to-json");
+var permute = require("collections/test/spec/permute");
+var describeToJson = require("collections/test/spec/to-json");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("Heap-spec", function () {
 
@@ -105,3 +109,5 @@ describe("Heap-spec", function () {
     });
 
 });
+
+return module.exports;});

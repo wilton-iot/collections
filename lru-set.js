@@ -1,11 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Shim = require("./shim");
-var Set = require("./set").CollectionsSet;
-var GenericCollection = require("./generic-collection");
-var GenericSet = require("./generic-set");
-var PropertyChanges = require("./listen/property-changes");
-var RangeChanges = require("./listen/range-changes");
+var Shim = require("collections/shim");
+var Set = require("collections/set").CollectionsSet;
+var GenericCollection = require("collections/generic-collection");
+var GenericSet = require("collections/generic-set");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
 
 module.exports = LruSet;
 
@@ -147,3 +148,5 @@ LruSet.prototype.reduceRight = function (callback, basis /*, thisp*/) {
 LruSet.prototype.iterate = function () {
     return this.store.iterate();
 };
+
+return module.exports;});

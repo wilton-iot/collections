@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /*jshint node:true, browser:false */
 var jasmineRequire = require('jasmine-core/lib/jasmine-core/jasmine.js');
 var JasmineConsoleReporter = require('jasmine-console-reporter');
@@ -38,7 +39,7 @@ jasmineEnv.addReporter({
 });
 
 // Execute
-var mrRequire = require('../node_modules/montage-testing/node_modules/montage/node_modules/mr/bootstrap-node');
+var mrRequire = require('collections/node_modules/montage-testing/node_modules/montage/node_modules/mr/bootstrap-node');
 var PATH = require("path");
 mrRequire.loadPackage(PATH.join(__dirname, ".")).then(function (mr) {
     return mr.async("all");
@@ -47,3 +48,5 @@ mrRequire.loadPackage(PATH.join(__dirname, ".")).then(function (mr) {
     process.exit(exitCode);
 }).thenReturn();
 
+
+return module.exports;});

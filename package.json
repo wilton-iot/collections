@@ -62,5 +62,18 @@
     "test:jasmine": "concurrently \"http-server -a localhost -p 8085\" \"open http://localhost:8085/test/run.html\"",
     "preversion:bower": "sed 's/\"version\": \"[^,]*\"/\"version\": \"'$npm_package_version'\"/' bower.json  > output &&  mv output bower.json",
     "version": "npm run preversion:bower && git add -A bower.json"
+  },
+  "main": "./collections.js",
+  "wilton": {
+    "excludes": [
+      "bench",
+      "demo",
+      "test",
+      "CHANGES.MD",
+      "FUTURE.MD",
+      "checklist.csv",
+      "collections.cat.js",
+      "minify"
+    ]
   }
 }

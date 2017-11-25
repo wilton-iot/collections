@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Object = require("./shim-object");
-var Iterator = require("./iterator");
+var Object = require("collections/shim-object");
+var Iterator = require("collections/iterator");
 
 module.exports = GenericMap;
 function GenericMap() {
@@ -209,3 +210,5 @@ Item.prototype.equals = function (that) {
 Item.prototype.compare = function (that) {
     return Object.compare(this.key, that.key);
 };
+
+return module.exports;});

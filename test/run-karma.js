@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global global:true,  __dirname, jasmineRequire */
 
 /*jshint evil:true */
@@ -76,7 +77,7 @@ function injectScript(src, module, callback) {
     var script = document.createElement('script');
     script.async = true;
     script.src = src;
-    script.setAttribute('data-promise-location', "../node_modules/montage-testing/node_modules/montage/node_modules/bluebird/js/browser/bluebird.js")
+    script.setAttribute('data-promise-location', "collections/node_modules/montage-testing/node_modules/montage/node_modules/bluebird/js/browser/bluebird.js")
     script.setAttribute('data-module', module);
     script.addEventListener('load', function () {
         callback(null, module);
@@ -102,3 +103,5 @@ injectScript('../node_modules/montage-testing/node_modules/montage/node_modules/
         throw err;
     }
 });
+
+return module.exports;});

@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 #!/usr/bin/env node --harmony_collections
 
-var WeakMap = require("../weak-map");
+var WeakMap = require("collections/weak-map");
 
 if (/native/.test(WeakMap.toString())) {
     console.log("Using native WeakMap");
@@ -15,3 +16,5 @@ map.set(key, 10);
 console.log(map.toString());
 console.log(map.get(key));
 
+
+return module.exports;});

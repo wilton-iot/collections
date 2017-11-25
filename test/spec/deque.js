@@ -1,9 +1,13 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Describe Array, List, and SortedSet, all of which have the interface of a
 // double-ended queue.  Array and List are proper queues since push and unshift
 // put the values at the ends, but for sake of reusing these tests for
 // SortedSet, all of these tests maintain the sorted order of the collection.
 
-var fuzzDeque = require("./deque-fuzz").fuzzDeque;
+var fuzzDeque = require("collections/test/spec/deque-fuzz").fuzzDeque;
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 module.exports = describeDeque;
 function describeDeque(Deque) {
@@ -338,3 +342,5 @@ function describeDeque(Deque) {
 
 }
 
+
+return module.exports;});

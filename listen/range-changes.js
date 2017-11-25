@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 //TODO:
@@ -5,9 +6,9 @@
 //Use ObjectChangeDescriptor to avoid creating useless arrays and benefit from similar gains made in property-changes
 
 
-var WeakMap = require("../weak-map"),
-    Map = require("../_map"),
-    ChangeDescriptor = require("./change-descriptor"),
+var WeakMap = require("collections/weak-map"),
+    Map = require("collections/_map"),
+    ChangeDescriptor = require("collections/listen/change-descriptor"),
     ObjectChangeDescriptor = ChangeDescriptor.ObjectChangeDescriptor,
     ChangeListenersRecord = ChangeDescriptor.ChangeListenersRecord,
     ListenerGhost = ChangeDescriptor.ListenerGhost;
@@ -265,3 +266,5 @@ RangeChanges.prototype.removeBeforeRangeChangeListener = function (listener, tok
 RangeChanges.prototype.dispatchBeforeRangeChange = function (plus, minus, index) {
     return this.dispatchRangeChange(plus, minus, index, true);
 };
+
+return module.exports;});

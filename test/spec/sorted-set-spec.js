@@ -1,12 +1,16 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 require("collections/shim-array");
 var SortedSet = require("collections/sorted-set");
 var TreeLog = require("collections/tree-log");
-var describeDeque = require("./deque");
-var describeCollection = require("./collection");
-var describeSet = require("./set");
-var describeToJson = require("./to-json");
-var Fuzz = require("./fuzz");
+var describeDeque = require("collections/test/spec/deque");
+var describeCollection = require("collections/test/spec/collection");
+var describeSet = require("collections/test/spec/set");
+var describeToJson = require("collections/test/spec/to-json");
+var Fuzz = require("collections/test/spec/fuzz");
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 
 describe("SortedSet-spec", function () {
 
@@ -455,3 +459,5 @@ describe("SortedSet-spec", function () {
     });
 
 });
+
+return module.exports;});

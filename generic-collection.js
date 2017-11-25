@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = GenericCollection;
@@ -287,4 +288,6 @@ GenericCollection._sizePropertyDescriptor = {
 
 Object.defineProperty(GenericCollection.prototype,"size",GenericCollection._sizePropertyDescriptor);
 
-require("./shim-array");
+require("collections/shim-array");
+
+return module.exports;});

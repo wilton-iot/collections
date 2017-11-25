@@ -1,10 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = List;
 
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
-var GenericOrder = require("./generic-order");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
+var GenericOrder = require("collections/generic-order");
 
 function List(values, equals, getDefault) {
     return List._init(List, this, values, equals, getDefault);
@@ -392,3 +393,5 @@ Node.prototype.addAfter = function (node) {
     next.prev = node;
     node.prev = this;
 };
+
+return module.exports;});

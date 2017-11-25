@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
-var Object = require("./shim-object");
-var MapChanges = require("./listen/map-changes");
-var PropertyChanges = require("./listen/property-changes");
+var Object = require("collections/shim-object");
+var MapChanges = require("collections/listen/map-changes");
+var PropertyChanges = require("collections/listen/property-changes");
 
 module.exports = GenericMap;
 function GenericMap() {
@@ -199,3 +200,5 @@ Item.prototype.compare = function (that) {
     return Object.compare(this.key, that.key);
 };
 
+
+return module.exports;});

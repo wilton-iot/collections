@@ -1,5 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // tests that are equally applicable to Dict, Map, SortedMap, unbounded LruMap, FastMap
 
+var describe = require("tape-compat");
+var it = describe.it;
+var expect = describe.expect;
 module.exports = describeDict;
 function describeDict(Dict) {
 
@@ -84,3 +88,5 @@ function shouldHaveTheUsualContent(dict) {
     }, [])).toEqual(['a', 'b']);
     expect(dict.length).toBe(2);
 }
+
+return module.exports;});

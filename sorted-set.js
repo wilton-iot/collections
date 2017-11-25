@@ -1,13 +1,14 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 module.exports = SortedSet;
 
-var Shim = require("./shim");
-var GenericCollection = require("./generic-collection");
-var GenericSet = require("./generic-set");
-var PropertyChanges = require("./listen/property-changes");
-var RangeChanges = require("./listen/range-changes");
-var TreeLog = require("./tree-log");
+var Shim = require("collections/shim");
+var GenericCollection = require("collections/generic-collection");
+var GenericSet = require("collections/generic-set");
+var PropertyChanges = require("collections/listen/property-changes");
+var RangeChanges = require("collections/listen/range-changes");
+var TreeLog = require("collections/tree-log");
 
 function SortedSet(values, equals, compare, getDefault) {
     if (!(this instanceof SortedSet)) {
@@ -778,3 +779,5 @@ Iterator.prototype.next = function () {
     }
     return this._iterationObject;
 };
+
+return module.exports;});
