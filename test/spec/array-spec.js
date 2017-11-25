@@ -155,7 +155,7 @@ describe("Array-spec", function () {
         it("should sort objects by a property array", function () {
             expect(unsorted.sorted(byFoo)).toEqual(sorted);
             unsorted.sorted(byFoo).forEach(function (x, i) {
-                expect(x).toBe(sorted[i]);
+                expect(x).to.eql(sorted[i]);
             });
         });
 
