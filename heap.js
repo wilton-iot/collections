@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 // Adapted from Eloquent JavaScript by Marijn Haverbeke
 // http://eloquentjavascript.net/appendix2.html
@@ -245,4 +245,4 @@ Heap.prototype.handleContentMapWillChange = function (value, key) {
     this.dispatchBeforeMapChange(key, value);
 };
 
-return module.exports;});
+require = requireOrig;});

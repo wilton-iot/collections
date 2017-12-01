@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 var Shim = require("collections/shim");
@@ -280,4 +280,4 @@ else {
     GlobalSet.CollectionsSet = CollectionsSet;
 }
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Describe Array, List, and SortedSet, all of which have the interface of a
 // double-ended queue.  Array and List are proper queues since push and unshift
 // put the values at the ends, but for sake of reusing these tests for
@@ -343,4 +343,4 @@ function describeDeque(Deque) {
 }
 
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var Iterator = require("collections/iterator");
 var List = require("collections/list");
@@ -132,4 +132,4 @@ console.log(Iterator([1, 2, 3, 4]).max());
 console.log(Iterator("abc").sum(""));
 
 
-return module.exports;});
+require = requireOrig;});

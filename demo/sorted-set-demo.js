@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var SortedSet = require("collections/sorted-set");
 
@@ -59,4 +59,4 @@ var set = new SortedSet([1, 3, 3, 5, 7, 10]);
 console.log(set.length);
 
 
-return module.exports;});
+require = requireOrig;});

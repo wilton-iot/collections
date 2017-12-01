@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 module.exports = Iterator;
@@ -374,4 +374,4 @@ Iterator.repeat = function (value, times) {
     });
 };
 
-return module.exports;});
+require = requireOrig;});

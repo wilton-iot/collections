@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Array, List, Set, FastSet, unbounded LruSet.
 // SortedSet does not qualify since these objects are incomparable.
 // Array#get() behaves like a Map, not a Set, so it is excluded from those
@@ -127,4 +127,4 @@ function describeCollection(Collection, values, setLike) {
 
 }
 
-return module.exports;});
+require = requireOrig;});

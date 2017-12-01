@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /* global global:true,  __dirname, jasmineRequire */
 
 /*jshint evil:true */
@@ -112,4 +112,4 @@ jasmineEnv.specFilter = function(spec) {
     return specFilter.matches(spec.getFullName());
 };
 
-return module.exports;});
+require = requireOrig;});

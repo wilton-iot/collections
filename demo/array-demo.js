@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 require("collections/shim-array");
 var Iterator = require("collections/iterator");
@@ -13,4 +13,4 @@ iterator.forEach(console.log);
 console.log(Array.from([1,2,3]));
 
 
-return module.exports;});
+require = requireOrig;});

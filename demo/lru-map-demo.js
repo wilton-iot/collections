@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var LruMap = require("collections/lru-map");
 
@@ -17,4 +17,4 @@ map["delete"]("d");
 console.log(map.toObject());
 
 
-return module.exports;});
+require = requireOrig;});

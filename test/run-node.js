@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /*jshint node:true, browser:false */
 var jasmineRequire = require('jasmine-core/lib/jasmine-core/jasmine.js');
 var JasmineConsoleReporter = require('jasmine-console-reporter');
@@ -49,4 +49,4 @@ mrRequire.loadPackage(PATH.join(__dirname, ".")).then(function (mr) {
 }).thenReturn();
 
 
-return module.exports;});
+require = requireOrig;});

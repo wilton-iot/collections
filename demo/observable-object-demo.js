@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 require("collections/observable-object");
 
@@ -12,4 +12,4 @@ object.a = 10;
 object.a = 20;
 
 
-return module.exports;});
+require = requireOrig;});

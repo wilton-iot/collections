@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var SortedArray = require("collections/sorted-array");
 
 var array = SortedArray([]);
@@ -10,4 +10,4 @@ console.log(array.indexOf(1));
 console.log(array.lastIndexOf(1));
 
 
-return module.exports;});
+require = requireOrig;});

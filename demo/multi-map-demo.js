@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var MultiMap = require("collections/multi-map");
 require("collections/shim-array"); // for Array#swap
@@ -20,4 +20,4 @@ map.set("a", []);
 console.log(map.get("a").toArray());
 console.log(map.get("a") === before);
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 require("collections/listen/array-changes");
 var describeRangeChanges = require("collections/range-changes");
@@ -559,4 +559,4 @@ describe("Array change dispatch", function () {
 
 });
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 (function (global) {
 var module$generic_collection={};module$generic_collection.module$exports=GenericCollection$$module$generic_collection;function GenericCollection$$module$generic_collection(){throw Error("Can't construct. GenericCollection is a mixin.");}
 GenericCollection$$module$generic_collection.prototype.addEach=function(a){if(a&&Object(a)===a)if("function"===typeof a.forEach)a.forEach(this.add,this);else if("number"===typeof a.length)for(var b=0;b<a.length;b++)this.add(a[b],b);else Object.keys(a).forEach(function(b){this.add(a[b],b)},this)};GenericCollection$$module$generic_collection.prototype.deleteEach=function(a){a.forEach(function(a){this["delete"](a)},this)};
@@ -188,4 +188,4 @@ SortedMap$$module$sorted_map.prototype.report=function(a,b,c,d){d=d||this.string
 global.Dict=module$dict;global.Iterator=module$iterator;
 })(this);
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var LruMap = require("collections/lru-map");
 var describeDict = require("collections/test/spec/dict");
@@ -89,4 +89,4 @@ describe("LruMap-spec", function () {
 */
 });
 
-return module.exports;});
+require = requireOrig;});

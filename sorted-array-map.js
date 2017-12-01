@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 var Shim = require("collections/shim");
@@ -54,4 +54,4 @@ SortedArrayMap.prototype.constructClone = function (values) {
     );
 };
 
-return module.exports;});
+require = requireOrig;});

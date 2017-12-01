@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var LfuSet = require("collections/lfu-set");
 var describeCollection = require("collections/test/spec/collection");
 var describeSet = require("collections/test/spec/set");
@@ -65,4 +65,4 @@ describe("LfuSet-spec", function () {
 */
 });
 
-return module.exports;});
+require = requireOrig;});

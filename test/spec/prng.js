@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 module.exports = prng;
 function prng(seed) {
@@ -9,4 +9,4 @@ function prng(seed) {
 }
 
 
-return module.exports;});
+require = requireOrig;});

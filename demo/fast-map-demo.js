@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var Map = require("collections/fast-map");
 
@@ -48,4 +48,4 @@ map.set(10, 'b');
 map.set(0, 'a');
 console.log(map.toArray());
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 require("collections/listen/array-changes");
 
@@ -20,4 +20,4 @@ array.push(40);
 array.splice(0, 0, 10, 20, 30);
 
 
-return module.exports;});
+require = requireOrig;});

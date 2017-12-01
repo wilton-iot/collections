@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 var Shim = require("collections/shim");
@@ -233,4 +233,4 @@ FastSet.prototype.logNode = function (node, write) {
     }
 };
 
-return module.exports;});
+require = requireOrig;});

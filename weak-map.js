@@ -1,5 +1,5 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 module.exports = (typeof WeakMap !== 'undefined') ? WeakMap : require("weak-map");
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /*
     Based in part on observable arrays from Motorola Mobility’s Montage
     Copyright (c) 2012, Motorola Mobility LLC. All Rights Reserved.
@@ -481,4 +481,4 @@ PropertyChanges.makePropertyObservable = function (object, key) {
     }
 };
 
-return module.exports;});
+require = requireOrig;});

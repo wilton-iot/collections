@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var SortedSet = require("collections/sorted-set");
 
@@ -32,4 +32,4 @@ console.log("Unicode round");
 tree.log();
 
 
-return module.exports;});
+require = requireOrig;});

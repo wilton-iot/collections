@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Tests that are equally applicable to Map, unbounded LruMap, FastMap.
 // These do not apply to SortedMap since keys are not comparable.
 
@@ -96,4 +96,4 @@ function describeMap(Map, values) {
 
 }
 
-return module.exports;});
+require = requireOrig;});

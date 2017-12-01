@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // TODO test insertion order
 
 var Map = require("collections/map");
@@ -18,4 +18,4 @@ describe("Map-spec", function () {
 });
 
 
-return module.exports;});
+require = requireOrig;});

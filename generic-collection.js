@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 module.exports = GenericCollection;
@@ -290,4 +290,4 @@ Object.defineProperty(GenericCollection.prototype,"size",GenericCollection._size
 
 require("collections/shim-array");
 
-return module.exports;});
+require = requireOrig;});

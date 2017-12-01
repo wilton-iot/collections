@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var SortedArraySet = require("collections/sorted-array-set");
 var describeDeque = require("collections/test/spec/deque");
@@ -23,4 +23,4 @@ describe("SortedArraySet-spec", function () {
 
 });
 
-return module.exports;});
+require = requireOrig;});

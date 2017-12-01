@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var List = require("collections/list");
 var describeDeque = require("collections/test/spec/deque");
@@ -217,4 +217,4 @@ describe("List-spec", function () {
 
 });
 
-return module.exports;});
+require = requireOrig;});

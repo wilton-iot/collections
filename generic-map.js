@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 var Object = require("collections/shim-object");
@@ -211,4 +211,4 @@ Item.prototype.compare = function (that) {
     return Object.compare(this.key, that.key);
 };
 
-return module.exports;});
+require = requireOrig;});

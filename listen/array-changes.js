@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /*
  Based in part on observable arrays from Motorola Mobility’s Montage
  Copyright (c) 2012, Motorola Mobility LLC. All Rights Reserved.
@@ -429,4 +429,4 @@ Object.defineEach(Array.prototype, PropertyChanges.prototype, false, /*configura
 Object.defineEach(Array.prototype, RangeChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
 Object.defineEach(Array.prototype, MapChanges.prototype, false, /*configurable*/true, /*enumerable*/ false, /*writable*/true);
 
-return module.exports;});
+require = requireOrig;});

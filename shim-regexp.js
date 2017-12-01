@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 /**
     accepts a string; returns the string with regex metacharacters escaped.
@@ -14,4 +14,4 @@ if (!RegExp.escape) {
 }
 
 
-return module.exports;});
+require = requireOrig;});

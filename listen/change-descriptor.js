@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /*
     Copyright (c) 2016, Montage Studio Inc. All Rights Reserved.
     3-Clause BSD License
@@ -141,4 +141,4 @@ WillChangeListenersRecord.prototype = new ChangeListenersRecord();
 WillChangeListenersRecord.prototype.constructor = WillChangeListenersRecord;
 WillChangeListenersRecord.prototype.genericHandlerMethodName = "handlePropertyWillChange";
 
-return module.exports;});
+require = requireOrig;});

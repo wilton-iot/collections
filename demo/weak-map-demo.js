@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 #!/usr/bin/env node --harmony_collections
 
 var WeakMap = require("collections/weak-map");
@@ -17,4 +17,4 @@ console.log(map.toString());
 console.log(map.get(key));
 
 
-return module.exports;});
+require = requireOrig;});

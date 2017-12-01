@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var Set = require("collections/set");
 var Iterator = require("collections/iterator");
@@ -49,4 +49,4 @@ console.log(new Set([3, 2, 1]).concat([4, 5, 6]).toArray())
 //console.log(new Set([1, 2, 3]).equals([1, 2, 3]));
 
 
-return module.exports;});
+require = requireOrig;});

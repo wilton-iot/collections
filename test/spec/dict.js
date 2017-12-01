@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // tests that are equally applicable to Dict, Map, SortedMap, unbounded LruMap, FastMap
 
 var describe = require("tape-compat");
@@ -89,4 +89,4 @@ function shouldHaveTheUsualContent(dict) {
     expect(dict.length).toBe(2);
 }
 
-return module.exports;});
+require = requireOrig;});

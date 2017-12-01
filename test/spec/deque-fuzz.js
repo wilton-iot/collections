@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var Deque = require("collections/deque");
 require("collections/shim-array");
@@ -95,4 +95,4 @@ function stringifyOp(op) {
 }
 
 
-return module.exports;});
+require = requireOrig;});

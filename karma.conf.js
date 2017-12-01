@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Karma configuration
 // Generated on Tue Mar 07 2017 13:59:10 GMT-0800 (PST)
 
@@ -167,4 +167,4 @@ module.exports = function(config) {
   })
 }
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 // Based on http://dhruvbird.com/lfu.pdf
@@ -247,4 +247,4 @@ function FrequencyNode(frequency, prev, next) {
     }
 }
 
-return module.exports;});
+require = requireOrig;});
